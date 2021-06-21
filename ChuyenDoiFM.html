@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<h3>Chuyển đổi độ dài</h3>
+  <p>
+  <label>Feet to meter :</label>
+  <input id="inputMeter" type="number" placeholder="Feet"
+         oninput="FeetToMeter(this.value)">
+  </p>
+  <p>
+  <label>Meter to feet :</label>
+  <input id="inputFeet" type="number" placeholder="Meter"
+         oninput="MeterToFeet(this.value)">
+  </p>
+
+<p>Meter : <span id="outputMeter"></span></p>
+<p>Feet  : <span id="outputFeet"></span></p>
+</form>
+<script>
+  function FeetToMeter(feet) {
+    document.getElementById("outputMeter").innerHTML=feet/3.279 + "&#160m"
+  }
+  function MeterToFeet(meter){
+    document.getElementById("outputFeet").innerHTML=meter/0.305 + "&#160feet"
+  }
+</script>
+</body>
+</html>
